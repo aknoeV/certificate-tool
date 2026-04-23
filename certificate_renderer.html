@@ -192,8 +192,8 @@
 // ─────────────────────────────────────────────────────────────────
 const TEMPLATES = {
 
-  "language-course": {
-    backgroundUrl: "https://aknonetwork.sharepoint.com/:i:/r/Team%20Belarus/AT%202026/Certificate%20Script/Certificates%20Language%20Course-1.png?csf=1&web=1&e=eeQIqc",
+  "lc-1": {
+    backgroundUrl: "https://aknoev.github.io/certificate-tool/lc-1.png",
     fields: {
       "Real Name": {
         left: 50, top: 42,
@@ -222,8 +222,8 @@ const TEMPLATES = {
     }
   },
 
-  "research-presentation": {
-    backgroundUrl: "https://aknonetwork.sharepoint.com/:i:/r/Team%20Belarus/AT%202026/Certificate%20Script/Certificates%20Audio%20Interview-1.png?csf=1&web=1&e=VjPdba",
+  "audio-interview": {
+    backgroundUrl: "https://aknoev.github.io/certificate-tool/audio-interview.png",
     fields: {
       "Real Name": {
         left: 50, top: 47,
@@ -252,6 +252,35 @@ const TEMPLATES = {
     }
   },
 
+  "conference": {
+    backgroundUrl: "https://aknoev.github.io/certificate-tool/conference.png",
+    fields: {
+      "Real Name": {
+        left: 50, top: 42,
+        fontSize: 36, fontFamily: "'EB Garamond', serif",
+        fontWeight: 600, fontStyle: "normal",
+        color: "#0D4A47", maxWidth: 70
+      },
+      "Event Title": {
+        left: 50, top: 52,
+        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "italic",
+        color: "#2a2a2a", maxWidth: 65
+      },
+      "Event Date": {
+        left: 50, top: 62,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#555", maxWidth: 40
+      },
+      "Issue Date": {
+        left: 50, top: 72,
+        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#777", maxWidth: 40
+      }
+    }
+  },
   // ── Add more templates following the same pattern ──
   // "template-key": { backgroundUrl: "...", fields: { ... } }
 
