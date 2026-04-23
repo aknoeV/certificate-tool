@@ -258,23 +258,68 @@ const TEMPLATES = {
   // Fields shown: Real Name, Event Title, Event Date, Issue Date
   "audio-interview": {
     backgroundUrl: "https://aknoev.github.io/certificate-tool/audio-interview.png",
-    fields: {
-      "Real Name":   { left: 50.42, top: 45.06, fontSize: 28, fontFamily: "'EB Garamond', serif",    fontWeight: 600, fontStyle: "normal", color: "#0D4A47" },
-      "Event Title": { left: 50,    top: 59,    fontSize: 18, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#1a1a1a" },
-      "Event Date":  { left: 59.31, top: 67.29, fontSize: 16, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Issue Date":  { left: 84.58, top: 82.15, fontSize: 14, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#666"    }
+       fields: {
+      "Real Name": {
+        left: 50.42, top: 45.06,
+        fontSize: 28, fontFamily: "'EB Garamond', serif",
+        fontWeight: 600, fontStyle: "normal",
+        color: "#0D4A47"
+      },
+      "Event Title": {
+        left: 50, top: 59,
+        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#1a1a1a"
+      },
+      "Event Date": {
+        left: 59.31, top: 67.29,
+        fontSize: 16, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Issue Date": {
+        left: 84.38, top: 82.44,
+        fontSize: 14, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#666"
+      }
     }
   },
 
   // Fields shown: Real Name, Event Title, Presentation Title, Event Date, Issue Date
   "conference": {
     backgroundUrl: "https://aknoev.github.io/certificate-tool/conference.png",
-    fields: {
-      "Real Name":          { left: 50.21, top: 44.36, fontSize: 32, fontFamily: "'EB Garamond', serif",    fontWeight: 600, fontStyle: "normal", color: "#0D4A47" },
-      "Event Title":        { left: 50,    top: 55.77, fontSize: 18, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#1a1a1a" },
-      "Presentation Title": { left: 50,    top: 63,    fontSize: 16, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "italic", color: "#333"    },
-      "Event Date":         { left: 40.31, top: 71.49, fontSize: 15, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Issue Date":         { left: 18.96, top: 83.26, fontSize: 13, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#666"    }
+        fields: {
+      "Real Name": {
+        left: 50.21, top: 44.36,
+        fontSize: 32, fontFamily: "'EB Garamond', serif",
+        fontWeight: 600, fontStyle: "normal",
+        color: "#0D4A47"
+      },
+      "Event Title": {
+        left: 50, top: 55.77,
+        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#1a1a1a"
+      },
+      "Presentation Title": {
+        left: 50.63, top: 66.1,
+        fontSize: 16, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "italic",
+        color: "#333"
+      },
+      "Event Date": {
+        left: 38.12, top: 71.5,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Issue Date": {
+        left: 18.96, top: 83.26,
+        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#666"
+      }
     }
   },
 
@@ -301,49 +346,143 @@ const TEMPLATES = {
   // Fields shown: Real Name, Event Title, Presentation Title, Event Date, Issue Date
   "round-table": {
     backgroundUrl: "https://aknoev.github.io/certificate-tool/round-table.png",
-    fields: {
-      "Real Name":          { left: 50.21, top: 44.36, fontSize: 32, fontFamily: "'EB Garamond', serif",    fontWeight: 600, fontStyle: "normal", color: "#0D4A47" },
-      "Event Title":        { left: 50,    top: 55.77, fontSize: 18, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#1a1a1a" },
-      "Presentation Title": { left: 50,    top: 63,    fontSize: 16, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "italic", color: "#333"    },
-      "Event Date":         { left: 40.31, top: 71.49, fontSize: 15, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Issue Date":         { left: 18.96, top: 83.26, fontSize: 13, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#666"    }
+        fields: {
+      "Real Name": {
+        left: 50.21, top: 44.36,
+        fontSize: 32, fontFamily: "'EB Garamond', serif",
+        fontWeight: 600, fontStyle: "normal",
+        color: "#0D4A47"
+      },
+      "Event Title": {
+        left: 50, top: 55.77,
+        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#1a1a1a"
+      },
+      "Presentation Title": {
+        left: 50.63, top: 66.1,
+        fontSize: 16, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "italic",
+        color: "#333"
+      },
+      "Event Date": {
+        left: 38.12, top: 71.5,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Issue Date": {
+        left: 18.96, top: 83.26,
+        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#666"
+      }
     }
   },
 
   // Fields shown: Real Name, Event Title, Event Date, Issue Date
   "training-lecturer": {
     backgroundUrl: "https://aknoev.github.io/certificate-tool/training-lecturer.png",
-    fields: {
-      "Real Name":   { left: 50.83, top: 44.36, fontSize: 32, fontFamily: "'EB Garamond', serif",    fontWeight: 600, fontStyle: "normal", color: "#0D4A47" },
-      "Event Title": { left: 50,    top: 58.57, fontSize: 18, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#1a1a1a" },
-      "Event Date":  { left: 58.96, top: 68.24, fontSize: 15, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Issue Date":  { left: 79.06, top: 82.52, fontSize: 13, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#666"    }
+       fields: {
+      "Real Name": {
+        left: 50.83, top: 44.36,
+        fontSize: 32, fontFamily: "'EB Garamond', serif",
+        fontWeight: 600, fontStyle: "normal",
+        color: "#0D4A47"
+      },
+      "Event Title": {
+        left: 50, top: 58.57,
+        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#1a1a1a"
+      },
+      "Event Date": {
+        left: 57.19, top: 68.25,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Issue Date": {
+        left: 79.06, top: 82.52,
+        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#666"
+      }
     }
   },
 
   // Fields shown: Real Name, Event Title, Event Date, Hours, Issue Date
   "training-participant": {
     backgroundUrl: "https://aknoev.github.io/certificate-tool/training-participant.png",
-    fields: {
-      "Real Name":   { left: 50.21, top: 44.51, fontSize: 32, fontFamily: "'EB Garamond', serif",    fontWeight: 600, fontStyle: "normal", color: "#0D4A47" },
-      "Event Title": { left: 50,    top: 58.72, fontSize: 18, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#1a1a1a" },
-      "Event Date":  { left: 67.19, top: 71.63, fontSize: 15, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Hours":       { left: 50,    top: 71,    fontSize: 15, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Issue Date":  { left: 78.96, top: 82.52, fontSize: 13, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#666"    }
+        fields: {
+      "Real Name": {
+        left: 50.21, top: 44.51,
+        fontSize: 32, fontFamily: "'EB Garamond', serif",
+        fontWeight: 600, fontStyle: "normal",
+        color: "#0D4A47"
+      },
+      "Event Title": {
+        left: 50, top: 58.72,
+        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#1a1a1a"
+      },
+      "Event Date": {
+        left: 67.5, top: 71.78,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Hours": {
+        left: 26.88, top: 71.88,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Issue Date": {
+        left: 78.96, top: 82.52,
+        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#666"
+      }
     }
   },
 
   // Fields shown: Real Name, Event Title, Event Date, Hours, Issue Date
   "workshop": {
     backgroundUrl: "https://aknoev.github.io/certificate-tool/workshop.png",
-    fields: {
-      "Real Name":   { left: 50.21, top: 44.51, fontSize: 32, fontFamily: "'EB Garamond', serif",    fontWeight: 600, fontStyle: "normal", color: "#0D4A47" },
-      "Event Title": { left: 50,    top: 58.72, fontSize: 18, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#1a1a1a" },
-      "Event Date":  { left: 67.19, top: 71.63, fontSize: 15, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Hours":       { left: 50,    top: 71,    fontSize: 15, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#333"    },
-      "Issue Date":  { left: 78.96, top: 82.52, fontSize: 13, fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontStyle: "normal", color: "#666"    }
+        fields: {
+      "Real Name": {
+        left: 50.21, top: 44.51,
+        fontSize: 32, fontFamily: "'EB Garamond', serif",
+        fontWeight: 600, fontStyle: "normal",
+        color: "#0D4A47"
+      },
+      "Event Title": {
+        left: 50, top: 58.72,
+        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#1a1a1a"
+      },
+      "Event Date": {
+        left: 67.5, top: 71.78,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Hours": {
+        left: 26.88, top: 71.88,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#333"
+      },
+      "Issue Date": {
+        left: 78.96, top: 82.52,
+        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 400, fontStyle: "normal",
+        color: "#666"
+      }
     }
-  }
 
 };
 
