@@ -6,9 +6,9 @@
 <title>Certificate Generator</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
-
+ 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   body {
     background: #1a1a1a;
     font-family: 'Montserrat', sans-serif;
@@ -19,7 +19,7 @@
     padding: 2rem 1rem;
     gap: 1.5rem;
   }
-
+ 
   /* ── Control bar (hidden when printing) ── */
   #controls {
     background: #2a2a2a;
@@ -33,7 +33,7 @@
     width: 100%;
     max-width: 960px;
   }
-
+ 
   #controls .label {
     font-size: 11px;
     letter-spacing: 0.08em;
@@ -41,14 +41,14 @@
     color: #888;
     white-space: nowrap;
   }
-
+ 
   #field-preview {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     flex: 1;
   }
-
+ 
   .field-tag {
     background: #0D4A47;
     color: #2BBFB0;
@@ -57,7 +57,7 @@
     border-radius: 20px;
     font-weight: 500;
   }
-
+ 
   #print-btn {
     background: #2BBFB0;
     color: #0D4A47;
@@ -74,7 +74,7 @@
     margin-left: auto;
   }
   #print-btn:hover { background: #23a89e; }
-
+ 
   /* ── Certificate canvas ── */
   #cert-wrapper {
     position: relative;
@@ -85,24 +85,24 @@
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     /* height is determined by the image's natural aspect ratio */
   }
-
+ 
   #cert-bg {
     /* Block-level so the wrapper grows to fit the image height */
     display: block;
     width: 100%;
     height: auto;
   }
-
+ 
   /* Each field is absolutely positioned via inline style */
   .cert-field {
     position: absolute;
-    white-space: pre-wrap;
+    white-space: nowrap;
     line-height: 1.3;
-    text-align: center;
+    text-align: left;
     transform: translateX(-50%);
     pointer-events: none;
   }
-
+ 
   /* ── Error / loading states ── */
   #error-msg {
     display: none;
@@ -115,7 +115,7 @@
     max-width: 960px;
     width: 100%;
   }
-
+ 
   #no-bg-notice {
     display: none;
     position: absolute;
@@ -127,7 +127,7 @@
     font-size: 14px;
     letter-spacing: 0.05em;
   }
-
+ 
   /* ── Print styles ── */
   @media print {
     body {
@@ -150,20 +150,21 @@
 </style>
 </head>
 <body>
-
+ 
 <div id="error-msg"></div>
-
+ 
 <div id="controls">
   <span class="label">Certificate data</span>
   <div id="field-preview"></div>
   <button id="print-btn" onclick="window.print()">Save as PDF ↓</button>
 </div>
-
+ 
 <div id="cert-wrapper">
   <div id="no-bg-notice">[ No template image configured for this certificate type ]</div>
   <img id="cert-bg" src="" alt="Certificate background" />
   <!-- Fields injected here by JS -->
 </div>
+
 
 <script>
 // ─────────────────────────────────────────────────────────────────
@@ -190,30 +191,30 @@ const TEMPLATES = {
 
   "audio-interview": {
     backgroundUrl: "https://aknoev.github.io/certificate-tool/audio-interview.png",
-  fields: {
+ fields: {
       "Real Name": {
-        left: 53.3, top: 43.8,
-        fontSize: 28, fontFamily: "'EB Garamond', serif",
+        left: 50, top: 42,
+        fontSize: 36, fontFamily: "'EB Garamond', serif",
         fontWeight: 600, fontStyle: "normal",
         color: "#0D4A47", maxWidth: 70
       },
       "Event Title": {
-        left: 51, top: 59.6,
+        left: 50, top: 52,
         fontSize: 18, fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400, fontStyle: "normal",
-        color: "#1a1a1a", maxWidth: 70
+        fontWeight: 400, fontStyle: "italic",
+        color: "#2a2a2a", maxWidth: 65
       },
       "Event Date": {
-        left: 61.7, top: 67,
-        fontSize: 16, fontFamily: "'Montserrat', sans-serif",
+        left: 50, top: 62,
+        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400, fontStyle: "normal",
-        color: "#333", maxWidth: 70
+        color: "#555", maxWidth: 40
       },
       "Issue Date": {
-        left: 87.1, top: 82.3,
-        fontSize: 14, fontFamily: "'Montserrat', sans-serif",
+        left: 50, top: 72,
+        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400, fontStyle: "normal",
-        color: "#666", maxWidth: 70
+        color: "#777", maxWidth: 40
       }
     }
     },
