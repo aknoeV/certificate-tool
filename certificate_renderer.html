@@ -80,19 +80,17 @@
     position: relative;
     width: 960px;
     max-width: 100%;
-    aspect-ratio: 1.414 / 1; /* A4 landscape */
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    /* height is determined by the image's natural aspect ratio */
   }
 
   #cert-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    /* Block-level so the wrapper grows to fit the image height */
     display: block;
+    width: 100%;
+    height: auto;
   }
 
   /* Each field is absolutely positioned via inline style */
@@ -141,14 +139,12 @@
     #cert-wrapper {
       width: 100vw;
       max-width: 100vw;
-      aspect-ratio: unset;
-      height: 100vh;
       box-shadow: none;
       border-radius: 0;
     }
     #cert-bg {
       width: 100%;
-      height: 100%;
+      height: auto;
     }
   }
 </style>
@@ -192,95 +188,66 @@
 // ─────────────────────────────────────────────────────────────────
 const TEMPLATES = {
 
-  "lc-1": {
-    backgroundUrl: "https://aknoev.github.io/certificate-tool/lc-1.png",
-    fields: {
+  "audio-interview": {
+    backgroundUrl: "REPLACE_WITH_YOUR_SHAREPOINT_PNG_URL_1",
+   fields: {
       "Real Name": {
-        left: 50, top: 42,
-        fontSize: 36, fontFamily: "'EB Garamond', serif",
+        left: 42.6, top: 43,
+        fontSize: 28, fontFamily: "'EB Garamond', serif",
         fontWeight: 600, fontStyle: "normal",
         color: "#0D4A47", maxWidth: 70
       },
       "Event Title": {
-        left: 50, top: 52,
+        left: 40.7, top: 59.8,
         fontSize: 18, fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400, fontStyle: "italic",
-        color: "#2a2a2a", maxWidth: 65
-      },
-      "Event Date": {
-        left: 50, top: 62,
-        fontSize: 15, fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400, fontStyle: "normal",
-        color: "#555", maxWidth: 40
-      },
-      "Issue Date": {
-        left: 50, top: 72,
-        fontSize: 13, fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400, fontStyle: "normal",
-        color: "#777", maxWidth: 40
-      }
-    }
-  },
-
- "audio-interview": {
-    backgroundUrl: "https://aknoev.github.io/certificate-tool/audio-interview.png",
-    fields: {
-      "Real Name": {
-        left: 50.3, top: 44,
-        fontSize: 30, fontFamily: "'EB Garamond', serif",
-        fontWeight: 600, fontStyle: "normal",
-        color: "#0D4A47", maxWidth: 70
-      },
-      "Event Title": {
-        left: 50, top: 60.9,
-        fontSize: 21, fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400, fontStyle: "normal",
         color: "#1a1a1a", maxWidth: 70
       },
       "Event Date": {
-        left: 52.1, top: 69.4,
+        left: 52.7, top: 67,
         fontSize: 16, fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400, fontStyle: "normal",
         color: "#333", maxWidth: 70
       },
       "Issue Date": {
-        left: 87, top: 82,
+        left: 81.4, top: 81.8,
         fontSize: 14, fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400, fontStyle: "normal",
         color: "#666", maxWidth: 70
       }
-    }
-  },
+	}
+    },
 
-  "conference": {
-    backgroundUrl: "https://aknoev.github.io/certificate-tool/conference.png",
+  "research-presentation": {
+    backgroundUrl: "REPLACE_WITH_YOUR_SHAREPOINT_PNG_URL_2",
     fields: {
       "Real Name": {
-        left: 50, top: 42,
-        fontSize: 36, fontFamily: "'EB Garamond', serif",
+        left: 50, top: 38,
+        fontSize: 40, fontFamily: "'EB Garamond', serif",
         fontWeight: 600, fontStyle: "normal",
-        color: "#0D4A47", maxWidth: 70
+        color: "#1a1a1a", maxWidth: 72
       },
       "Event Title": {
-        left: 50, top: 52,
-        fontSize: 18, fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400, fontStyle: "italic",
-        color: "#2a2a2a", maxWidth: 65
+        left: 50, top: 50,
+        fontSize: 17, fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 500, fontStyle: "normal",
+        color: "#0D4A47", maxWidth: 68
       },
       "Event Date": {
-        left: 50, top: 62,
+        left: 50, top: 61,
         fontSize: 15, fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400, fontStyle: "normal",
-        color: "#555", maxWidth: 40
+        color: "#444", maxWidth: 40
       },
       "Issue Date": {
-        left: 50, top: 72,
+        left: 50, top: 70,
         fontSize: 13, fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400, fontStyle: "normal",
-        color: "#777", maxWidth: 40
+        color: "#888", maxWidth: 40
       }
     }
   },
+
   // ── Add more templates following the same pattern ──
   // "template-key": { backgroundUrl: "...", fields: { ... } }
 
